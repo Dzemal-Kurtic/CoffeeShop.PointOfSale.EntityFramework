@@ -22,9 +22,11 @@ internal class ProductController
         throw new NotImplementedException();
     }
 
-    internal static void GetProducts()
+    internal static List<Product> GetProducts()
     {
-        throw new NotImplementedException();
+        using var db = new ProductContext();
+        var products = db.Products.ToList();
+        return products;
     }
 
     internal static void UpdateProduct()
