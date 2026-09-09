@@ -11,9 +11,11 @@ internal class ProductController
         db.SaveChanges();
     }
 
-    internal static void DeleteProduct()
+    internal static void DeleteProduct(Product product)
     {
-        throw new NotImplementedException();
+        using var db = new ProductContext();
+        db.Remove(product);
+        db.SaveChanges();
     }
 
     internal static Product GetProductById(int id)
