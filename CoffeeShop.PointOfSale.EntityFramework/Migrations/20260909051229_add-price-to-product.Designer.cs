@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoffeeShop.PointOfSale.EntityFramework.Migrations
 {
-    [DbContext(typeof(ProductContext))]
+    [DbContext(typeof(ProductsContext))]
     [Migration("20260909051229_add-price-to-product")]
     partial class addpricetoproduct
     {
